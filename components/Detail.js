@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Card, Tile, Icon, Button } from 'react-native-elements';
 import { mtData } from '../shared/MountainList'
 
-import { add, remove } from '../redux/action'
+import { add, remove } from '../redux/actioncreator'
 import { useDispatch, useSelector } from 'react-redux'
 
 const Detail = ({ route }) => {
