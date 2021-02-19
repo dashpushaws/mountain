@@ -1,7 +1,7 @@
 export const mtData = [
   {
     id: 1,
-    title: 'Seoraksan',
+    title: 'Seoraksan(설악산)',
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Korea_Seoraksan.jpg/1200px-Korea_Seoraksan.jpg",
     height: '1708m',
     location:'강원도'

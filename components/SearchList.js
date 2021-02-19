@@ -11,7 +11,7 @@ const SearchList = ({ navigation, keyword }) => {
     return(
 
       list.map((item, i) => (
-        <ListItem containerStyle={{width:"80%"}} key={i} bottomDivider onPress={()=>{navigation.navigate('Detail', {id: item.id})}}>
+        <ListItem containerStyle={{width:"100%"}} key={i} bottomDivider onPress={()=>{navigation.navigate('Detail', {id: item.id})}}>
           <ListItem.Content>
             <ListItem.Title>{item.title}</ListItem.Title>
           </ListItem.Content>

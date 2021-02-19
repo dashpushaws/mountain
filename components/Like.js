@@ -2,39 +2,82 @@ import React from 'react';
 import { useSelector, useDispatch  } from 'react-redux';
 import { StyleSheet, Text, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import { Avatar, ListItem, Icon } from 'react-native-elements'
-import { mtData } from '../shared/MountainList'
-import { add, remove } from '../redux/actioncreator'
+import { Avatar, ListItem, Icon, Tile, Header } from 'react-native-elements'
+import { remove } from '../redux/actioncreator'
 
 const Like = ({ navigation }) => {
-
-  const like = useSelector(state => state.likeReducer);
-  // const actions = useSelector(state => state.actions);
-  console.log('test------>', like);
-  
-  
   const dispatch = useDispatch();
+
+  const likes = useSelector(state => state.likes);
+  const flag = useSelector(state => state.flag);
+  const isClimbed = flag.filter(item => item.id == id).length > 0 ? true : false;
+
+  console.log('===============Like==============')
+  console.log('test------>', likes);
+  
+  
+  
 
   return (
     <View style={{flex:1}}>
       <ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: "center", justifyContent: 'center' }}>
       {
 
-        like.map((item, i) => (
-          <ListItem containerStyle={{width:"80%"}} key={i}>
-            <Avatar source={{uri: item.image}} />
-            <ListItem.Content>
-              <ListItem.Title>{item.title}</ListItem.Title>
-              <ListItem.Subtitle>{item.subtitle}</ListItem.Subtitle>
-            </ListItem.Content>
-            <Icon name='close' type='ionicon' color='gray' onPress={()=>{dispatch(remove(item.id))}} />
-          </ListItem>
-        ))
+        likes.map((likeItem, i) => (
 
+
+              <ListItem containerStyle={{width:"100%"}} key={i}>
+                <Avatar
+                source={{uri: likeItem.image}} 
+                // size={70}
+                />
+                <ListItem.Content>
+                  <ListItem.Title>{likeItem.title}</ListItem.Title>
+                  <ListItem.Subtitle>{likeItem.subtitle}</ListItem.Subtitle>
+                </ListItem.Content>
+                
+                {
+                  flag.findIndex(flagItem => flagItem.id == likeItem.id) == -1 ?
+                    <Icon
+                      name='atlassian'
+                      type='fontisto'
+                      color='#FFCC00'
+                    />
+                    :
+                    <Icon
+                      name='flag'
+                      type='entypo'
+                      color='#009900'
+                    />
+                }
+
+                <Icon name='checkmark-outline' type='ionicon' color='#f00' onPress={()=>{dispatch(remove(likeItem))}} />
+              </ListItem>
+            )
+        
+        
+        )
       }
+      {/* {
+        likes.map((item, i) => (
+            <Tile key={i}
+              imageSrc={{uri: item.image}}
+              title={item.title}
+              contentContainerStyle={{ height: 70 }}
+              caption={item.height}
+              featured
+            >
+              <View
+                style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}
+              >
+                <Text>Caption</Text>
+                <Text>Caption</Text>
+              </View>
+            </Tile>
+        ))
+      } */}
       </ScrollView>
     </View>
-    // <></>
     )
 }
 export default Like;

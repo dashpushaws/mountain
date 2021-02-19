@@ -11,7 +11,7 @@ const Home = ({ navigation }) => {
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-start' }}>
-      <SearchBar platform={"android"} containerStyle={{width:'80%'}}
+      <SearchBar platform={"android"} containerStyle={{width:'100%'}}
         placeholder="산을 입력하세요"
         onChangeText={handleSearch}
         value={keyword}

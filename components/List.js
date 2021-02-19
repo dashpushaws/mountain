@@ -1,13 +1,23 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { useSelector, useDispatch  } from 'react-redux';
 import { mtData } from '../shared/MountainList'
 import { ListItem, Avatar } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler'
 
+
+
+// const n = Math.random();
+
 const List = ({ navigation }) => {
   // console.log('test-------------->')
+  console.log('===============List===============');
+  const x = useSelector(state => state.likes);
+  console.log(x);
+  // console.log('------------------------');
+  // console.log(n);
+  // console.log('XXXXXXXXXXXXXXXXXXXXX');
   const list = mtData;
-  // console.log(list);
 
   return (
     <View>

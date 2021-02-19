@@ -29,16 +29,16 @@ const ListStack = createStackNavigator();
 const HomeStackScreen = () => {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="Home" component={Home} options={{title:"HomeTab", headerTitleAlign:"center"}} />
-      <HomeStack.Screen name="Detail" component={Detail} options={{title:"DetailInfo", headerTitleAlign:"center"}}  />
+      <HomeStack.Screen name="Home" component={Home} options={{title:"Home", headerTitleAlign:"center"}} />
+      <HomeStack.Screen name="Detail" component={Detail} options={{title:"Detail", headerTitleAlign:"center"}}  />
     </HomeStack.Navigator>
   )
 }
 const ListStackScreen = () => {
   return (
     <ListStack.Navigator>
-      <ListStack.Screen name="List" component={List} options={{title:"ListTab", headerTitleAlign:"center"}} />
-      <ListStack.Screen name="Detail" component={Detail} options={{title:"DetailInfo", headerTitleAlign:"center"}}  />
+      <ListStack.Screen name="List" component={List} options={{title:"MountainList", headerTitleAlign:"center"}} />
+      <ListStack.Screen name="Detail" component={Detail} options={{title:"Detail", headerTitleAlign:"center"}}  />
     </ListStack.Navigator>
   )
 }

@@ -1,4 +1,4 @@
-// Action method
+// Action Creator
 
 // action creator: 이파일 명칭
 // dispatch는 action creator를 호출하는 거였다
@@ -14,4 +14,23 @@ export const add = payload => (
 export const remove = payload => ({
   type: 'like/REMOVE',
   payload: payload 
+})
+
+
+export const checkState = payload => ({
+  type: 'like/CHECK',
+  payload: payload 
+
+})
+
+export const climb = payload => ({
+  type: 'flag/FLAGED',
+  payload: payload 
+
+})
+
+export const unclimb = payload => ({
+  type: 'flag/NOTYET',
+  payload: payload 
+
 })
