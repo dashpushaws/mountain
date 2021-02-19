@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useSelector, useDispatch  } from 'react-redux';
-import { mtData } from '../shared/MountainList'
+import { mtData } from '../shared/domesticMountain'
 import { ListItem, Avatar } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler'
 

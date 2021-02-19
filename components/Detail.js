@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { Card, colors, Icon } from 'react-native-elements';
-import { mtData } from '../shared/MountainList'
+import { mtData } from '../shared/domesticMountain'
 
 import { add, remove, checkState, climb, unclimb } from '../redux/actioncreator'
 import { useDispatch, useSelector } from 'react-redux'

@@ -1,5 +1,5 @@
 import React from 'react';
-import { mtData } from '../shared/MountainList'
+import { mtData } from '../shared/domesticMountain'
 import { ListItem } from 'react-native-elements'
 
 const SearchList = ({ navigation, keyword }) => {
