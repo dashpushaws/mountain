@@ -10,13 +10,9 @@ const Like = ({ navigation }) => {
 
   const likes = useSelector(state => state.likes);
   const flag = useSelector(state => state.flag);
-  const isClimbed = flag.filter(item => item.id == id).length > 0 ? true : false;
 
   console.log('===============Like==============')
   console.log('test------>', likes);
-  
-  
-  
 
   return (
     <View style={{flex:1}}>
